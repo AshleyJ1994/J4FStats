@@ -58,7 +58,7 @@
                             </v-card-text>
                         </v-card>
                     </v-tab-item>
-                    <!-- <v-tab-item v-for="(item, index) in seasons" :key="item.Season">
+                    <v-tab-item v-for="(item, index) in seasons" :key="item.Season">
                         <v-card flat>
                             <v-card-text>
                                 <v-layout row wrap class="justify-center">
