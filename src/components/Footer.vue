@@ -63,7 +63,7 @@ export default {
   },
   computed:{
     mediaLinksFiltered(){ 
-      return this.mediaLinks.filter(o=> o.name === "discord" || o.name === "patreon")}
+      return this.mediaLinks.filter(o=> o.name === "discord" )}
   }
 }
 </script>

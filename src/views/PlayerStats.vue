@@ -9,7 +9,7 @@
               Squad Player Stats
             </div>
             <div class="subtitle-1 playerStat-Text">
-               Just4Fun gaming player stats are updated daily at 7 AM EST. Use the search bar to search your in game user name and click the top of a column that you want to sort.
+               Just4Fun gaming player stats are updated hourly. Use the search bar to search your in game user name and click the top of a column that you want to sort.
             </div>
             <Seasons/>
             <!-- <StatsTables :topStat="players" :totalStat="totals"/>--><!-- This will be for the total of them all -->

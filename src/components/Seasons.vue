@@ -107,55 +107,6 @@
                             </v-card-text>
                         </v-card>
                     </v-tab-item> -->
-                    <v-tab-item>
-                        <v-card flat>
-                            <v-card-text>
-                                <v-layout row wrap class="justify-center">
-                                    <v-flex xs12 sm6 md4 lg3 xl2>
-                                        <v-hover v-slot:default="{ hover }">
-                                            <v-card class="text-xs-center ma-2 topCards" :elevation="hover ? 5 : 2">
-                                                <v-card-text class="harshDockey">
-                                                    <h2>7475</h2>
-                                                    <div class="subheading">Top Kills 『LiQ』HarshDonkey</div>
-                                                </v-card-text>
-                                            </v-card>
-                                        </v-hover>
-                                    </v-flex>
-                                    <v-flex xs12 sm6 md4 lg3 xl2>
-                                        <v-hover v-slot:default="{ hover }">
-                                            <v-card class="text-xs-center ma-2 topCards" :elevation="hover ? 5 : 2">
-                                                <v-card-text>
-                                                    <h2>4858</h2>
-                                                    <div class="subheading">Top Deaths Kossy</div>
-                                                </v-card-text>
-                                            </v-card>
-                                        </v-hover>
-                                    </v-flex>
-                                    <v-flex xs12 sm6 md4 lg2 xl2>
-                                        <v-hover v-slot:default="{ hover }">
-                                            <v-card class="text-xs-center ma-2 topCards" :elevation="hover ? 5 : 2">
-                                                <v-card-text>
-                                                    <h2>4817</h2>
-                                                    <div class="subheading">Top Revives 0xd34df00d</div>
-                                                </v-card-text>
-                                            </v-card>
-                                        </v-hover>
-                                    </v-flex>
-                                    <v-flex xs12 sm6 md4 lg5 xl2>
-                                        <v-hover v-slot:default="{ hover }">
-                                            <v-card class="text-xs-center ma-2 topCards" :elevation="hover ? 5 : 2">
-                                                <v-card-text class="harshDockey">
-                                                    <h2>1,676.97 Hours</h2>
-                                                    <div class="subheading">Top Time Played 『LiQ』HarshDonkey</div>
-                                                </v-card-text>
-                                            </v-card>
-                                        </v-hover>
-                                    </v-flex>
-                                </v-layout>
-                                <StatsTables :topStat="archivedTopStat" :totalStat="archivedTotalStat" :tab="tab"/>
-                            </v-card-text>
-                        </v-card>
-                    </v-tab-item>
                 </v-tabs-items>
             </v-card>
     </v-container>    
