@@ -24,7 +24,6 @@
                 <a target="_blank" :href="squadLink.link" width="75px !important"><img src="@/assets/squad_white.png" class="justify-center squadLink" width="75px"></a>
               </div>              
               <div>
-                <a target="_blank" :href="minecraftLink.link" width="75px !important"><img src="@/assets/minecraft_logo.jpg" class="justify-center minecraftLink" width="45px"></a>
               </div>              
             </v-row>
           </v-flex>
@@ -36,7 +35,7 @@
       <v-divider></v-divider>
 
       <v-card-text class="white--text footerName">
-        <strong>LiQ Gaming</strong>
+        <strong>Just4Fun</strong>
       </v-card-text>
       <v-card-text class="rights white--text">
         @Copyright 2019-{{ new Date().getFullYear() }}<br>
