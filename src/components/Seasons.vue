@@ -58,7 +58,7 @@
                             </v-card-text>
                         </v-card>
                     </v-tab-item>
-                    <v-tab-item v-for="(item, index) in seasons" :key="item.Season">
+                    <!-- <v-tab-item v-for="(item, index) in seasons" :key="item.Season">
                         <v-card flat>
                             <v-card-text>
                                 <v-layout row wrap class="justify-center">
@@ -107,6 +107,55 @@
                             </v-card-text>
                         </v-card>
                     </v-tab-item> -->
+                    <v-tab-item>
+                        <v-card flat>
+                            <v-card-text>
+                                <v-layout row wrap class="justify-center">
+                                    <v-flex xs12 sm6 md4 lg3 xl2>
+                                        <v-hover v-slot:default="{ hover }">
+                                            <v-card class="text-xs-center ma-2 topCards" :elevation="hover ? 5 : 2">
+                                                <v-card-text class="harshDockey">
+                                                    <h2>0</h2>
+                                                    <div class="subheading">Top Kills NULL</div>
+                                                </v-card-text>
+                                            </v-card>
+                                        </v-hover>
+                                    </v-flex>
+                                    <v-flex xs12 sm6 md4 lg3 xl2>
+                                        <v-hover v-slot:default="{ hover }">
+                                            <v-card class="text-xs-center ma-2 topCards" :elevation="hover ? 5 : 2">
+                                                <v-card-text>
+                                                    <h2>0</h2>
+                                                    <div class="subheading">Top Deaths NULL</div>
+                                                </v-card-text>
+                                            </v-card>
+                                        </v-hover>
+                                    </v-flex>
+                                    <v-flex xs12 sm6 md4 lg2 xl2>
+                                        <v-hover v-slot:default="{ hover }">
+                                            <v-card class="text-xs-center ma-2 topCards" :elevation="hover ? 5 : 2">
+                                                <v-card-text>
+                                                    <h2>0</h2>
+                                                    <div class="subheading">Top Revives NULL</div>
+                                                </v-card-text>
+                                            </v-card>
+                                        </v-hover>
+                                    </v-flex>
+                                    <v-flex xs12 sm6 md4 lg5 xl2>
+                                        <v-hover v-slot:default="{ hover }">
+                                            <v-card class="text-xs-center ma-2 topCards" :elevation="hover ? 5 : 2">
+                                                <v-card-text class="harshDockey">
+                                                    <h2>0 Hours</h2>
+                                                    <div class="subheading">Top Time Played NULL</div>
+                                                </v-card-text>
+                                            </v-card>
+                                        </v-hover>
+                                    </v-flex>
+                                </v-layout>
+                                <StatsTables :topStat="archivedTopStat" :totalStat="archivedTotalStat" :tab="tab"/>
+                            </v-card-text>
+                        </v-card>
+                    </v-tab-item>
                 </v-tabs-items>
             </v-card>
     </v-container>    
