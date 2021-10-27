@@ -40,7 +40,7 @@ Here you will find all of your personal stats, including KDs, revives and much m
                   <v-row align="left" justify="left">
                     <v-col>
                       <div :class="{'display-3 font-weight-bold': $vuetify.breakpoint.smAndUp, 'display-3 font-weight-bold': $vuetify.breakpoint.smAndDown}">
- Just4Fun currently hosts 4 Squad servers for our community. More will be coming throughout the year.<br/>
+                        Just4Fun currently hosts 4 Squad servers for our community. More will be coming throughout the year.<br/>
                       </div>
                     </v-col>
                   </v-row>
@@ -63,7 +63,7 @@ Here you will find all of your personal stats, including KDs, revives and much m
 // @ is an alias to /src
 import Servers from "@/components/Servers.vue";
 //Json files
-import playersListJson from "@/assets/json/players.json"
+
 import squadServersListJson from "@/assets/json/squadServerInfo.json"
 import mediaLinks from "@/assets/json/mediaLinks.json"
 
@@ -85,7 +85,6 @@ export default {
         return o.name === "squadTrello";
       }),
       squadServersList: squadServersListJson,
-      PlayersList : PlayersListJson,
       firstCarouselItems: [
       ],
       secondCarouselItems: [
