@@ -34,7 +34,7 @@
               <v-card class="card-container rule-cards">
                 <v-card-text class="px-3" :class="{'smaller-display': $vuetify.breakpoint.smAndDown}">
                   <v-card-title>
-                    <h5 class="titleColour">{players.Name}</h5>
+                    <h5 class="titleColour">{{players.Name}}</h5>
                   </v-card-title>
                   <v-card-subtitle>
                     <p>{players.Time}</p>
