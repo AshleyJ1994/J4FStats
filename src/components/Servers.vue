@@ -30,7 +30,7 @@
         <v-expansion-panel>
           <v-expansion-panel-header class="titleColour">Active Players</v-expansion-panel-header>
           <v-expansion-panel-content>
-            <v-flex v-for="player in players" :key="player.id" class="player-data">
+            <v-flex v-for="player in PlayersDataList" :key="player.Name" class="player-data">
               <v-card class="card-container rule-cards">
                 <v-card-text class="px-3" :class="{'smaller-display': $vuetify.breakpoint.smAndDown}">
                   <v-card-title>
@@ -107,17 +107,17 @@ export default {
     name: "Players",
     data(){
       return {
-        Players:[]
+        PlayersDataList:[]
       };
     },
     methods:{
     getplayerlist(){
-      fetch("src\assets\json\players.json")
+      fetch("@src\assets\json\players.json")
       .then(response => response.json())
-      .then(data => (this.players = data));
+      .then(data => (this.PlayersDataList = data));
     }
     }
-  }
+  };
 </script>
 
 
