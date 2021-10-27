@@ -2,7 +2,6 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import PlayerStats from '../views/PlayerStats.vue'
-import MapRotation from '../views/MapRotation.vue'
 import SquadMaps from '../views/SquadMaps.vue'
 
 import RouterLinks from '../constants/RouterLinks.js'
@@ -22,11 +21,6 @@ export default new VueRouter({
       path: '/playerstats',
       name: 'Player Stats',
       component: PlayerStats
-    },
-    {
-      path: '/mapRotation',
-      name: 'MapRotation',
-      component: MapRotation
     },
     {
       path: '/squadMaps',
