@@ -99,12 +99,8 @@ export default {
     containBreaks(descriptions){
       return descriptions.includes('\n');
     }
-  }
-}
-</script>
-<script>
-export default {
-    name: "Players",
+  },
+  name: "Players",
     data(){
       return {
         PlayersDataList:[]
@@ -117,7 +113,7 @@ export default {
       .then(data => (this.PlayersDataList = data));
     }
     }
-  };
+}
 </script>
 
 
