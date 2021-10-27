@@ -76,7 +76,7 @@
         <v-expansion-panel>
           <v-expansion-panel-header class="titleColour">Active Players</v-expansion-panel-header>
           <v-expansion-panel-content>
-            <v-flex v-for="(rule, index) in server.rules" :key="index">
+            <v-flex>
               <v-card class="card-container rule-cards">
                 <v-card-text class="px-4" :class="{'larger-display': $vuetify.breakpoint.smAndDown}">
                   <v-card-title>
