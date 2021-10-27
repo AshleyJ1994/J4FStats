@@ -102,7 +102,7 @@ export default {
 };
 </script>
 <script>
-      import json from '.\src\assets\json\players.json'
+      import json from 'src\assets\json\players.json'
       export default{
           data(){
               return{
