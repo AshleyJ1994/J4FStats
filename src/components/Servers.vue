@@ -14,22 +14,10 @@
       <v-layout>
         <template>
           <div v-if="$vuetify.breakpoint.mdAndDown">
-            <!-- <iframe
-              :src="'https://cdn.battlemetrics.com/b/horizontal500x80px/' + server.battlemetricId + '.html?foreground=%23EEEEEE&background=%23222222&lines=%23333333&linkColor=%231185ec&chartColor=%23FF0700'"
-              frameborder="0"
-              style="border:0"
-              :name="server.battlemetricId"
-            ></iframe> -->
             <a target="_blank" :href="'https://www.battlemetrics.com/servers/squad/'+ server.battlemetricId"><img :src="'https://cdn.battlemetrics.com/b/standardVertical/' + server.battlemetricId + '.png?foreground=%23EEEEEE&linkColor=%231185ec&lines=%23333333&background=%23222222&chart=players%3A24H&chartColor=%23FF0700&maxPlayersHeight=300'" /></a>
           </div>
           <div v-else></div>
           <div v-if="$vuetify.breakpoint.lgAndUp">
-            <!-- <iframe
-              :src="'https://cdn.battlemetrics.com/b/standardVertical/' + server.battlemetricId + '.html?foreground=%23EEEEEE&linkColor=%231185ec&lines=%23333333&background=%23222222&chart=players%3A24H&chartColor=%23FF0700&maxPlayersHeight=300'"
-              frameborder="0"
-              style="border:0"
-              :name="server.battlemetricId"
-            ></iframe> -->
             <a target="_blank" :href="'https://www.battlemetrics.com/servers/squad/'+ server.battlemetricId"><img :src="'https://cdn.battlemetrics.com/b/horizontal500x80px/' + server.battlemetricId + '.png?foreground=%23EEEEEE&background=%23222222&lines=%23333333&linkColor=%231185ec&chartColor=%23FF0700'" /></a>
           </div>
           <div v-else></div>
@@ -74,6 +62,28 @@
                   </v-card-title>
                   <v-card-subtitle v-if="rule.description != null">
                     <p>{{rule.description}}</p>
+                  </v-card-subtitle>
+                </v-card-text>
+              </v-card>
+            </v-flex>
+          </v-expansion-panel-content>
+        </v-expansion-panel>
+      </v-expansion-panels>
+    </div>
+     <div class="serverNothingCard"></div>
+    <div class="serverInfoCard">
+      <v-expansion-panels class="serverExpantionCard" v-if="server.rules != undefined">
+        <v-expansion-panel>
+          <v-expansion-panel-header class="titleColour">Active Players</v-expansion-panel-header>
+          <v-expansion-panel-content>
+            <v-flex v-for="(rule, index) in server.rules" :key="index">
+              <v-card class="card-container rule-cards">
+                <v-card-text class="px-4" :class="{'larger-display': $vuetify.breakpoint.smAndDown}">
+                  <v-card-title>
+                    <h5 class="titleColour">1</h5>
+                  </v-card-title>
+                  <v-card-subtitle v-if="rule.description != null">
+                    <p>1</p>
                   </v-card-subtitle>
                 </v-card-text>
               </v-card>
