@@ -56,7 +56,7 @@
           <v-expansion-panel-content>
             <v-flex>
               <v-card class="card-container rule-cards">
-                <v-card-text class="px-4" :class="{'larger-display': $vuetify.breakpoint.smAndDown}">
+                <v-card-text class="px-3" :class="{'smaller-display': $vuetify.breakpoint.smAndDown}">
                   <v-card-title>
                     <h5 class="titleColour">{username}</h5>
                   </v-card-title>
