@@ -30,7 +30,7 @@
         <v-expansion-panel>
           <v-expansion-panel-header class="titleColour">Active Players</v-expansion-panel-header>
           <v-expansion-panel-content>
-            <v-flex v-for="(Name) in players" :key="Name">
+            <v-flex v-for="player in players" :key="player.Name">
               <v-card class="card-container rule-cards">
                 <v-card-text class="px-3" :class="{'smaller-display': $vuetify.breakpoint.smAndDown}">
                   <v-card-title>
@@ -102,12 +102,17 @@ export default {
 };
 </script>
 <script>
-      import players from "@/assets/json/players.json"
       export default{
           data(){
               return{
-                  players: players
+                  players:[]
               }
+          },
+          mounted(){
+            fetch("@/assets/json/players.json")
+            .then(res => res.json())
+            .then(data => this.Name = data)
+            .catch(err => console.log(err.message))
           }
       }
 </script>

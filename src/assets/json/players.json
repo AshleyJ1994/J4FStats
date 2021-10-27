@@ -1,6 +1,6 @@
-[
-    {
-        "Name": "LuCkY", 
-        "Time": "2:45"
-    }
-]
+{
+    "Players": [
+    {"Name": "LuCkY", "Time": "2:45"},
+    {"Name": "Frogmanbro123", "Time": "2:22"}
+    ]
+}
