@@ -101,21 +101,7 @@ export default {
   }
 };
 </script>
-<script>
-      export default{
-          data(){
-              return{
-                  players:[]
-              }
-          },
-          mounted(){
-            fetch("@/assets/json/players.json")
-            .then(res => res.json())
-            .then(data => this.Name = data)
-            .catch(err => console.log(err.message))
-          }
-      }
-</script>
+
 
 <style lang="scss" scoped>
 .titleColour {
