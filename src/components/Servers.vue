@@ -24,30 +24,6 @@
         </template>
       </v-layout>
     </v-card-text>
-    <div v-if="server.mapVoteCommands != null" class="serverInfoCard">
-      <v-expansion-panels class="serverExpantionCard">
-        <v-expansion-panel>
-          <v-expansion-panel-header class="titleColour">Map Vote Commands</v-expansion-panel-header>
-          <v-expansion-panel-content>
-            <v-flex v-for="(command, index) in server.mapVoteCommands" :key="index">
-              <v-card class="card-container rule-cards">
-                <v-card-text class="px-4">
-                  <v-card-title>
-                    <h5 class="titleColour">{{index+1}}: {{command.title}}</h5>
-                  </v-card-title>
-                  <v-card-subtitle :class="{ preWrapped: containBreaks(command.description)}" v-if="command.description != null && command.link == null">
-                    <p>{{command.description}}</p>
-                  </v-card-subtitle>
-                  <v-card-subtitle :class="{ preWrapped: containBreaks(command.description)}" v-if="command.description != null && command.link != null">
-                    <p>{{command.description}} <a target="_blank" :href="command.link">Squad Layers</a></p>
-                  </v-card-subtitle>
-                </v-card-text>
-              </v-card>
-            </v-flex>
-          </v-expansion-panel-content>
-        </v-expansion-panel>
-      </v-expansion-panels>
-    </div>
      <div class="serverNothingCard"></div>
     <div class="serverInfoCard">
       <v-expansion-panels class="serverExpantionCard" >
@@ -92,7 +68,6 @@
         </v-expansion-panel>
       </v-expansion-panels>
     </div>
-    
   </v-card>
 </v-hover>
 </template>
