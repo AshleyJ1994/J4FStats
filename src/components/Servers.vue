@@ -30,7 +30,7 @@
         <v-expansion-panel>
           <v-expansion-panel-header class="titleColour">Active Players</v-expansion-panel-header>
           <v-expansion-panel-content>
-            <v-flex v-for="player in players" :key="player.Name">
+            <v-flex>
               <v-card class="card-container rule-cards">
                 <v-card-text class="px-3" :class="{'smaller-display': $vuetify.breakpoint.smAndDown}">
                   <v-card-title>
