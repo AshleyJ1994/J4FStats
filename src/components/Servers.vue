@@ -58,10 +58,10 @@
               <v-card class="card-container rule-cards">
                 <v-card-text class="px-4" :class="{'larger-display': $vuetify.breakpoint.smAndDown}">
                   <v-card-title>
-                    <h5 class="titleColour">1</h5>
+                    <h5 class="titleColour">{username}</h5>
                   </v-card-title>
                   <v-card-subtitle>
-                    <p>1</p>
+                    <p>{Session Length}</p>
                   </v-card-subtitle>
                 </v-card-text>
               </v-card>
