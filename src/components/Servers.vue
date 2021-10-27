@@ -72,7 +72,7 @@
     </div>
      <div class="serverNothingCard"></div>
     <div class="serverInfoCard">
-      <v-expansion-panels class="serverExpantionCard" v-if="server.rules != undefined">
+      <v-expansion-panels class="serverExpantionCard" >
         <v-expansion-panel>
           <v-expansion-panel-header class="titleColour">Active Players</v-expansion-panel-header>
           <v-expansion-panel-content>
@@ -82,7 +82,7 @@
                   <v-card-title>
                     <h5 class="titleColour">1</h5>
                   </v-card-title>
-                  <v-card-subtitle v-if="rule.description != null">
+                  <v-card-subtitle>
                     <p>1</p>
                   </v-card-subtitle>
                 </v-card-text>
