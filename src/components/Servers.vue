@@ -30,11 +30,11 @@
         <v-expansion-panel>
           <v-expansion-panel-header class="titleColour">Active Players</v-expansion-panel-header>
           <v-expansion-panel-content>
-            <v-flex>
+            <v-flex v-for="player in players" :key="player.id" class="player-data">
               <v-card class="card-container rule-cards">
                 <v-card-text class="px-3" :class="{'smaller-display': $vuetify.breakpoint.smAndDown}">
                   <v-card-title>
-                    <h5 class="titleColour">{players.Name}</h5>
+                    <h5 class="titleColour">{{player.Name}}</h5>
                   </v-card-title>
                   <v-card-subtitle>
                     <p>{players.Time}</p>
@@ -90,6 +90,7 @@ export default {
         return {};
       },
     },
+
   },
   methods: {
     screenSize(){
@@ -99,7 +100,24 @@ export default {
       return descriptions.includes('\n');
     }
   }
-};
+}
+</script>
+<script>
+export default {
+    name: "Players",
+    data(){
+      return {
+        Players:[]
+      };
+    },
+    methods:{
+    getplayerlist(){
+      fetch("src\assets\json\players.json")
+      .then(response => response.json())
+      .then(data => (this.players = data));
+    }
+    }
+  }
 </script>
 
 
