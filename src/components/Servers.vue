@@ -30,11 +30,11 @@
         <v-expansion-panel>
           <v-expansion-panel-header class="titleColour">Active Players</v-expansion-panel-header>
           <v-expansion-panel-content>
-            <v-flex v-for="player in PlayersDataList" :key="player.Name" class="player-data">
+            <v-flex v-for="PlayersData in PlayersDataList" :key="PlayersData.Name" class="player-data">
               <v-card class="card-container rule-cards">
                 <v-card-text class="px-3" :class="{'smaller-display': $vuetify.breakpoint.smAndDown}">
                   <v-card-title>
-                    <h5 class="titleColour">{{player.Name}}</h5>
+                    <h5 class="titleColour">{{PlayersData.Name}}</h5>
                   </v-card-title>
                   <v-card-subtitle>
                     <p>{players.Time}</p>
@@ -112,7 +112,7 @@ export default {
       .then(response => response.json())
       .then(data => (this.PlayersDataList = data));
     }
-    }
+  }
 }
 </script>
 
