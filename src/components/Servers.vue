@@ -100,19 +100,19 @@ export default {
       return descriptions.includes('\n');
     }
   },
-  name: "Players",
-    data(){
-      return {
-        PlayersDataList:[]
-      };
-    },
-    methods:{
-    getplayerlist(){
-      fetch("@src\assets\json\players.json")
-      .then(response => response.json())
-      .then(data => (this.PlayersDataList = data));
-    }
-  }
+  // name: "Players",
+  //   data(){
+  //     return {
+  //       PlayersDataList:[]
+  //     };
+  //   },
+  //   methods:{
+  //   getplayerlist(){
+  //     fetch("@src\assets\json\players.json")
+  //     .then(response => response.json())
+  //     .then(data => (this.PlayersDataList = data));
+  //   }
+  // }
 }
 </script>
 
