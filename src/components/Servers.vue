@@ -48,28 +48,6 @@
         </v-expansion-panel>
       </v-expansion-panels>
     </div>
-    <div v-else class="serverNothingCard"></div>
-    <div class="serverInfoCard">
-      <v-expansion-panels class="serverExpantionCard" v-if="server.rules != undefined">
-        <v-expansion-panel>
-          <v-expansion-panel-header class="titleColour">Rules</v-expansion-panel-header>
-          <v-expansion-panel-content>
-            <v-flex v-for="(rule, index) in server.rules" :key="index">
-              <v-card class="card-container rule-cards">
-                <v-card-text class="px-4" :class="{'larger-display': $vuetify.breakpoint.smAndDown}">
-                  <v-card-title>
-                    <h5 class="titleColour">{{index+1}}: {{rule.title}}</h5>
-                  </v-card-title>
-                  <v-card-subtitle v-if="rule.description != null">
-                    <p>{{rule.description}}</p>
-                  </v-card-subtitle>
-                </v-card-text>
-              </v-card>
-            </v-flex>
-          </v-expansion-panel-content>
-        </v-expansion-panel>
-      </v-expansion-panels>
-    </div>
      <div class="serverNothingCard"></div>
     <div class="serverInfoCard">
       <v-expansion-panels class="serverExpantionCard" >
@@ -92,6 +70,29 @@
         </v-expansion-panel>
       </v-expansion-panels>
     </div>
+    <div class="serverNothingCard"></div>
+    <div class="serverInfoCard">
+      <v-expansion-panels class="serverExpantionCard" v-if="server.rules != undefined">
+        <v-expansion-panel>
+          <v-expansion-panel-header class="titleColour">Rules</v-expansion-panel-header>
+          <v-expansion-panel-content>
+            <v-flex v-for="(rule, index) in server.rules" :key="index">
+              <v-card class="card-container rule-cards">
+                <v-card-text class="px-4" :class="{'larger-display': $vuetify.breakpoint.smAndDown}">
+                  <v-card-title>
+                    <h5 class="titleColour">{{index+1}}: {{rule.title}}</h5>
+                  </v-card-title>
+                  <v-card-subtitle v-if="rule.description != null">
+                    <p>{{rule.description}}</p>
+                  </v-card-subtitle>
+                </v-card-text>
+              </v-card>
+            </v-flex>
+          </v-expansion-panel-content>
+        </v-expansion-panel>
+      </v-expansion-panels>
+    </div>
+    
   </v-card>
 </v-hover>
 </template>
