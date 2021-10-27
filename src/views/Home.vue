@@ -63,6 +63,7 @@ Here you will find all of your personal stats, including KDs, revives and much m
 // @ is an alias to /src
 import Servers from "@/components/Servers.vue";
 //Json files
+import playersListJson from "@/assets/json/players.json"
 import squadServersListJson from "@/assets/json/squadServerInfo.json"
 import mediaLinks from "@/assets/json/mediaLinks.json"
 
@@ -84,6 +85,7 @@ export default {
         return o.name === "squadTrello";
       }),
       squadServersList: squadServersListJson,
+      PlayersList : PlayersListJson,
       firstCarouselItems: [
       ],
       secondCarouselItems: [
