@@ -30,14 +30,14 @@
 
 <script>
 // @ is an alias to /src
-import RuleCard from "@/components/PlayerCard.vue";
+import PlayerCard from "@/components/PlayerCard.vue";
 //Json files 
 import players from "@/assets/json/players.json"
 
 export default {
   name: "Players",
   components: {
-    RuleCard
+    PlayerCard
   },
   data () {
     return {
